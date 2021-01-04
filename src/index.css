@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+
+.navButton {
+    @apply mr-4 px-2 py-1 font-medium rounded transition-all duration-100 ease-in-out
+}
+
+.navButton:hover {
+    @apply text-white bg-brand-dark
+}
+
+.blog-title {
+    @apply text-3xl md:text-4xl font-bold text-center sm:text-left md:leading-relaxed text-gray-800 
+}
+
+.blog-sub-title {
+    @apply  text-center mx-auto sm:mx-0 sm:text-left py-6 text-lg md:text-xl leading-relaxed w-3/4 
+}
+
+.blog-heading {
+    @apply text-3xl font-bold my-4
+}
+
+.blog-text {
+    @apply my-4 leading-loose text-xl
+}
+
+
+
+@tailwind utilities;
