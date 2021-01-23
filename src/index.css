@@ -9,22 +9,61 @@
     @apply text-white bg-brand-dark
 }
 
-.blog-title {
-    @apply text-3xl md:text-4xl font-bold text-center sm:text-left md:leading-relaxed text-gray-800 
+.exemption-container {
+    @apply flex items-center flex-col pt-24 relative
 }
 
-.blog-sub-title {
-    @apply  text-center mx-auto sm:mx-0 sm:text-left py-6 text-lg md:text-xl leading-relaxed w-3/4 
+.exemption-title {
+    @apply font-medium text-4xl text-gray-700
 }
 
-.blog-heading {
-    @apply text-3xl font-bold my-4
+.exemption-subtitle {
+    @apply text-gray-500 text-center
 }
 
-.blog-text {
-    @apply my-4 leading-loose text-xl
+.exemption-continue {
+    @apply bg-brand-default text-white text-xl px-10 py-2 rounded-md
 }
 
+.exemption-cannot-continue {
+    @apply bg-brand-default bg-opacity-50 text-white text-xl px-10 py-2 rounded-md
+}
+
+.exemption-continue:hover {
+    @apply bg-brand-dark
+}
+
+.exemption-back {
+    @apply bg-gray-200 text-gray-800 text-xl px-10 py-2 rounded-md outline-none
+}
+
+.exemption-back:hover {
+    @apply bg-gray-300
+}
+
+.exemption-bottom {
+    @apply border-t-2 flex justify-between items-center border-gray-200 h-24 w-full
+}
+
+.exemption-label {
+    @apply block text-gray-500 font-medium text-base mb-2
+}
+
+.exemption-input {
+    @apply appearance-none block focus:ring-1 w-full border border-gray-400 placeholder-gray-500 placeholder-opacity-50 outline-none transition-all duration-100 ease-in-out rounded py-1 px-2 focus:bg-white
+}
+
+.exemption-input:hover {
+    @apply border-blue-500
+}
+
+.exemption-input:focus {
+    @apply border-blue-500
+}
+
+.top-750-px {
+    top: 750px;
+}
 
 
 @tailwind utilities;

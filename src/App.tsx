@@ -1,12 +1,12 @@
 import React from 'react';
 import Navbar from './components/Navbar'
-import BlogContent from './components/BlogContent'
+import ExemptionContainer from './components/ExemptionContainer'
 
 function App() {
   return (
     <div className="flex relative flex-col h-screen">
       <Navbar />
-      <BlogContent />
+      <ExemptionContainer />
     </div>
   );
 }

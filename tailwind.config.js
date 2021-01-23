@@ -26,6 +26,10 @@ module.exports = {
         default: '#63b7af',
         dark: '#53a79f',
       },
+      'brand-blue': {
+        500: '#35495E',
+        100: '#EBF6F5'
+      },
       blue: colors.blue,
       indigo: colors.indigo,
       purple: colors.violet,

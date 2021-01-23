@@ -1,0 +1,125 @@
+.forward-enter {
+  opacity: 0.5;
+  transform: translateX(50px);
+}
+
+.forward-enter-active {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 300ms ease-out;
+}
+
+.forward-exit {
+  display:none;
+}
+
+.forward-exit-active {
+  display:none;
+}
+
+.backward-enter {
+  opacity: 0.5;
+  transform: translateX(-50px);
+}
+
+.backward-enter-active {
+  opacity: 1;
+  transform: translateX(0px);
+  transition: all 300ms ease-out;
+}
+
+.backward-exit {
+  display:none;
+}
+
+.backward-exit-active {
+  display:none;
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow:0 0 0 50px white inset; /* Change the color to your own background color */
+  -webkit-text-fill-color: #333;
+}
+
+.flexbox > div {
+  width: 300px;
+  height: 300px;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 25%;
+  flex: 0 0 25%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.nb-spinner {
+  width: 75px;
+  height: 75px;
+  margin: 0;
+  background: transparent;
+  border-top: 4px solid #009688;
+  border-right: 4px solid transparent;
+  border-radius: 50%;
+  -webkit-animation: 1s spin linear infinite;
+  animation: 1s spin linear infinite;
+}
+
+.magnifying {
+  -webkit-animation: move-in-circle 8s infinite ease-in-out;
+          animation: move-in-circle 8s infinite ease-in-out;
+}
+
+@keyframes move-in-circle {
+  from {
+    left: 50%;
+    top: 25%;
+  }
+
+  25% {
+    left: 30%;
+    top: 35%;
+  }
+
+  75% {
+    left: 60%;
+    top: 35%;
+  }
+
+  to {
+    left: 50%;
+    top: 25%;
+  }
+}
+
+
+.shadow-anim {
+  position: relative;
+}
+
+.shadow-anim::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  opacity: 0;
+  transition: opacity 200ms ease-in-out;
+}
+
+.shadow-anim:hover::before {
+  opacity: 1;
+}
