@@ -52,7 +52,7 @@ export default function MailingAddress({nextStep, previousStep, userInfo, setInf
                         <h1 className="exemption-title">Enter your current mailing address</h1>
                     
                     </div>
-                    <p className="exemption-subtitle text-left mt-4">We’re going check for available savings at your primary residence. Check to <br/> make sure the information below is where you primarily reside.</p>
+                    <p className="exemption-subtitle text-left mt-4">We’re going check for available savings at your primary residence. <br/> Check to make sure the information below is where you primarily reside.</p>
                     
                     <AddressInput addressChange={handleChange} />
                     

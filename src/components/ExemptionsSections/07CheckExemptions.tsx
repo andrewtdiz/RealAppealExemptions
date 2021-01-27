@@ -7,7 +7,7 @@ import ownsProperty from '../../images/ownsProperty.png'
 import ExemptionsButton from '../ExemptionsButton'
 
 export default function CheckExemptions({nextStep, previousStep, exemptions, userInfo}) {
-    const [progress, setProgress] = useState(0);
+    const [refs, setRefs] = useState<Array<HTMLElement | null>>([]);
 
     const getImageFromString = (str) => {
         switch(str) {
@@ -22,10 +22,26 @@ export default function CheckExemptions({nextStep, previousStep, exemptions, use
         }
     }
 
+    useEffect(() => {
+        let refs: Array<HTMLElement | null>;
+        refs = [];
+        exemptions.map(exemption => exemption.questions.forEach((question, ind) => refs.push(document.getElementById(ind))));
+        console.log(refs);
+        setRefs(refs);
+    }, [])
+
+    const handleClick = (ind) => {
+        console.log(refs);
+        if(ind<3) refs[ind+1]?.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+          });
+    }
+
     return (
         <section className="exemption-container">
             {exemptions.map(exemption => exemption.questions.map((question, ind) => (
-                <div key={exemption.id+ind} className="container flex flex-col justify-center" style={{minHeight: "80vh"}}>
+                <div id={ind} key={exemption.id+ind} className="container flex flex-col justify-center" style={{minHeight: "80vh"}}>
                     <div className="flex flex-col items-center justify-between w-full">
                         <img src={getImageFromString(question.image)} className="w-36 h-36" alt=""/>
                         <h1 className="exemption-title mt-8">{question.content}</h1>
@@ -34,13 +50,13 @@ export default function CheckExemptions({nextStep, previousStep, exemptions, use
 
                         <div className="mt-8">
                             {question.options[0]==='Date' 
-                            ? <div className="flex">
+                            ? <div onBlur={() => handleClick(ind)} className="flex">
                                 <input className="exemption-input w-full" type="date" placeholder={"Date"}/>
-                              </div>
-                            : <div className="flex flex-col">
+                            </div>
+                            : <div  onClick={() => handleClick(ind)} className="flex flex-col">
                                 {question.options.map((val,ind) => (
                                     <ExemptionsButton key={ind} val={val} />))}  
-                              </div>}
+                            </div>}
                         </div>
                     </div>
                 </div>

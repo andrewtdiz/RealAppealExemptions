@@ -22,11 +22,11 @@
 }
 
 .exemption-continue {
-    @apply bg-brand-default text-white text-xl px-10 py-2 rounded-md
+    @apply bg-brand-default font-medium text-white text-xl px-7 py-3 rounded-md
 }
 
 .exemption-cannot-continue {
-    @apply bg-brand-default bg-opacity-50 text-white text-xl px-10 py-2 rounded-md
+    @apply bg-brand-default bg-opacity-50 text-white text-xl px-7 py-3 rounded-md
 }
 
 .exemption-continue:hover {
@@ -34,7 +34,7 @@
 }
 
 .exemption-back {
-    @apply bg-gray-200 text-gray-800 text-xl px-10 py-2 rounded-md outline-none
+    @apply bg-gray-200 font-medium text-gray-800 text-xl px-7 py-3 rounded-md outline-none
 }
 
 .exemption-back:hover {

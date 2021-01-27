@@ -8,7 +8,7 @@ export default function LetsCheck({nextStep}) {
             <div className="bg-brand-blue-100 flex flex-col items-center justify-between w-full">
                 <h1 className="exemption-title mt-8">Let's check for tax exemptions</h1>
                 <p className="exemption-subtitle mt-4">What are property tax exemptions?</p>
-                <button className="text-blue-600 hover:underline">Learn more</button>
+                <button className="text-blue-600 hover:underline mt-4">Learn more</button>
 
                 <div className="h-48 w-48 relative mt-4">
                 <svg className="absolute h-64 w-64" style={{left: '50%', top: '132%', transform: 'translate(-45%, -98%)'}} viewBox="0 0 293 268" fill="none" xmlns="http://www.w3.org/2000/svg">

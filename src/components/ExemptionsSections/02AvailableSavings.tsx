@@ -8,7 +8,7 @@ export default function AvailableSavings({nextStep, previousStep}) {
                 <div className="bg-brand-blue-100 flex flex-col items-center justify-between w-full">
                     <h1 className="exemption-title mt-8">Let's check for available savings</h1>
                     <p className="exemption-subtitle mt-4">Property owners who meet certain requirements may qualify for a reduction in <br/> their property’s taxable value or effective property tax rate.</p>
-                    <button className="text-blue-600 hover:underline">Learn more</button>
+                    <button className="text-blue-600 hover:underline mt-4">Learn more</button>
 
                     <div className="h-48 w-48 relative mt-4">
                       <svg className="absolute h-64 w-64" style={{left: '50%', top: '132%', transform: 'translate(-45%, -98%)'}} viewBox="0 0 293 268" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -47,8 +47,7 @@ export default function AvailableSavings({nextStep, previousStep}) {
                     </div>
                 </div>
                 <div className="exemption-bottom absolute top-750-px">
-                    <button className="exemption-back" onClick={() => previousStep()}>Go Back</button>
-                    <button className="exemption-continue" onClick={() => nextStep()}>Continue</button>
+                    <button className="exemption-continue ml-auto" onClick={() => nextStep()}>Continue</button>
                 </div>
             </div>
         </section>

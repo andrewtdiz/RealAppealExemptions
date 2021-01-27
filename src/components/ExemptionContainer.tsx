@@ -55,7 +55,7 @@ let exemptionsData = [
             {
                 image:'primaryResidence',
                 content: 'Will this be your primary residence in 2021?',
-                description: 'According to state law in  Florida, primary residence is defined as a single property where you reside for more than 180 days/years.',
+                description: 'According to state law in  Florida, primary residence is defined as the place your reside for 181 days or more of the year.',
                 options: ['Yes, it will be', 'No, it won\'t be'],
                 answer: '',
                 learnMore: ''
@@ -114,12 +114,12 @@ let exemptionsData = [
 
 export default function ExemptionContainer() {
     // An array [previous, current] that maintains the state of the view
-    const [fromTo, setFromTo] = useState([0,0])
+    const [fromTo, setFromTo] = useState([1,1])
     
     // The viewPort array through which views are loaded/unloaded
     // Must be initialized to the first view from steps.
     const [viewPort, setViewPort] = useState<Array<JSX.Element | null>>([(
-        <LetsCheck nextStep={nextStep} />
+        <AvailableSavings nextStep={nextStep} previousStep={previousStep}/>
     )])
 
     const [hasFound, setHasFound] = useState(false)
@@ -136,7 +136,7 @@ export default function ExemptionContainer() {
             setHasFound(true)
             setTimeout((val) => {
                 setViewPort([states[val]])
-            }, Math.random()*500+500, fromTo[1])
+            }, 200, fromTo[1])
             return
         } else if(fromTo[0]===2 && fromTo[1]===3) {
             setTimeout((val) => {
@@ -146,7 +146,7 @@ export default function ExemptionContainer() {
         }
         setTimeout((val) => {
             setViewPort([states[val]])
-        }, Math.random()*500+500, fromTo[1])
+        }, 200, fromTo[1])
     }, [fromTo])
 
     // Go to the next view

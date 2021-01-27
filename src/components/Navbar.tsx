@@ -7,7 +7,7 @@ export default function Navbar() {
             <div className="container flex justify-between items-center">
                 <div className="flex flex-col ml-2 sm:ml-0 justify-center items-start">
                     <img src={logo} className="flex-1 w-auto mt-1 cursor-pointer" alt=""/>
-                    <p className="text-sm -mt-1 font-light">simple & fast property appeals</p>
+                    <p className="text-sm -mt-1 font-light">simple & fast property tax appeals</p>
                 </div>
                 <div className="flex" style={{fontFamily: 'Montserrat', fontWeight: 500}}>
                     <button className="navButton hidden sm:block">Home</button>
